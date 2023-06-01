@@ -32,9 +32,9 @@ function Terminal() {
             <thead>
               <tr>
                 <th className="px-4 py-2">Date</th>
-                <th className="px-4 py-2">Entreprise</th>
+                <th className="px-4 py-2">Company</th>
                 <th className="px-4 py-2">Role</th>
-                <th className="px-4 py-2">Description</th>
+                <th className="px-4 py-2">Mission</th>
               </tr>
             </thead>
             <tbody>
@@ -95,13 +95,15 @@ function Terminal() {
             <a href="https://www.behance.net/fatimastaili" target="_blank" rel="noopener noreferrer">
               Behance
             </a>
+            <br />
+            Don't hesitate to say hi ;)
           </>
         );
         break;
       case "hobbies":
         newOutput[newOutput.length - 1].output = (
           <>
-            <span className="whitespace-pre-wrap break-words"> • video games</span>
+            <span className="whitespace-pre-wrap break-words">• video games</span>
             <br />
             <span className="whitespace-pre-wrap break-words">
               • reading (here’s my goodreads account:{" "}
@@ -115,6 +117,66 @@ function Terminal() {
           </>
         );
         break;
+      case "projects":
+        newOutput[newOutput.length - 1].output = (
+          <table className="table-auto">
+            <thead>
+              <tr>
+                <th className="px-4 py-2">Date</th>
+                <th className="px-4 py-2">Project</th>
+                <th className="px-4 py-2">Link</th>
+                <th className="px-4 py-2">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border px-4 py-2">OCT2022-MAR2023</td>
+                <td className="border px-4 py-2">Operating System Verification for the Internet of Things (IoT)</td>
+                <td className="border px-4 py-2">
+                  <a
+                    href="https://drive.google.com/drive/folders/1p_8kNf78o9668I_Yn98dXZoW-n3lwvWK?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    link
+                  </a>
+                </td>
+                <td className="border px-4 py-2">
+                  The goal of the project is to specify and verify, using Frama-C and WP, several Contiki-NG modules. I worked on network modules (TCP/UDP/IPV6) using E-ACSL.
+                </td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">SEP2022</td>
+                <td className="border px-4 py-2">Qiskit Fall Fest</td>
+                <td className="border px-4 py-2">
+                  <a href="https://qiskit-fall-fest-algiers.wtmalgiers.org/" target="_blank" rel="noopener noreferrer">
+                    link
+                  </a>
+                </td>
+                <td className="border px-4 py-2">
+                  With a 5 members team we developed a cool website for one of the biggest Quantum Computing events hosted by GDG algiers (link to the code in my github;)
+                </td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">MAI2023</td>
+                <td className="border px-4 py-2">Terminal Portfolio</td>
+                <td className="border px-4 py-2">
+                  <a
+                    href="https://drive.google.com/drive/folders/1vEksd9AR2dX_XWf0OqcenNE6s6RC1Xsu?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    link
+                  </a>
+                </td>
+                <td className="border px-4 py-2">
+                  I was looking for a cool project that would connect with my developer background. So, I thought of a unique way to present my CV using a terminal format.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        );
+        break;
       case "help":
         newOutput[newOutput.length - 1].output = `
           • about: learn more about me
@@ -124,13 +186,13 @@ function Terminal() {
           • projects: list of my projects
           • hobbies: check out my hobbies
           • clear: clear terminal
-          • get cv: download my cv
+          • get -cv: download my cv
         `;
         break;
       case "clear":
         newOutput = [];
         break;
-      case "get cv":
+      case "get -cv":
         window.open("https://drive.google.com/file/d/1-hW5Jv4gIsJBmgOFwtrYrn99u6f94Lhw/view?usp=share_link");
         break;
       default:
@@ -147,7 +209,7 @@ function Terminal() {
   function handleKeyDown(e) {
     if (e.key === "Tab") {
       e.preventDefault();
-      const commands = ["about", "contact", "socials", "work", "projects", "hobbies", "clear", "get cv"];
+      const commands = ["about", "contact", "socials", "work", "projects", "hobbies", "clear", "get -cv"];
       const match = commands.find((cmd) => cmd.startsWith(command));
       if (match) {
         setCommand(match);
@@ -157,12 +219,12 @@ function Terminal() {
 
   return (
     <div className="bg-black h-screen w-screen flex justify-center items-center">
-      <div className="bg-gray-900 text-white text-left flex flex-col rounded-lg w-2/3 h-3/4 overflow-hidden">
+      <div className="bg-gray-900 text-white text-left flex flex-col rounded-lg w-full md:w-2/3 lg:w-1/2 h-3/4 overflow-hidden">
         <div className="bg-gray-700 p-2 rounded-t-lg flex items-center justify-between">
           <div className="flex space-x-2">
+            <div className="text-red-500">&#x25CF;</div>
             <div className="text-blue-500">&#x25CF;</div>
             <div className="text-green-500">&#x25CF;</div>
-            <div className="text-yellow-500">&#x25CF;</div>
           </div>
           <div className="text-gray-300">~/Portfolio/Terminal/STAILI</div>
           <div className="text-red-500 cursor-pointer">&#x2716;</div>
