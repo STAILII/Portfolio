@@ -7,9 +7,10 @@ This is Terminal designed to return my work and project experiences :)
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/STAILII/portfolio/blob/main/src/icons/portfolio.JPG">
-    <img src="./public/src/icons/portfolio.png" alt="Logo" width="70%" height="auto">
-  </a>
+  <a href="https://github.com/STAILII/portfolio/blob/main/public/portfolio.JPG)">
+    <img src="./public/portfolio.png" alt="portfolio" width="auto" height="auto">
+  </a>[
+](https://github.com/STAILII/portfolio/blob/main/public/portfolio.JPG)
   
   
 ## Demo
