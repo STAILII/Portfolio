@@ -10,6 +10,8 @@ This is Terminal designed to return my work and project experiences :)
     <img src="./public/portfolio.JPG" alt="Logo" width="70%" height="auto">
   </a>
   
+  
+  
 ## Demo
 
 https://resume-staili.com/
