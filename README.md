@@ -3,6 +3,15 @@
 
 This is Terminal designed to return my work and project experiences :) 
 
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/STAILII/portfolio/blob/main/src/icons/portfolio.JPG">
+    <img src="./public/src/icons/portfolio.png" alt="Logo" width="70%" height="auto">
+  </a>
+  
+  
 ## Demo
 
 https://resume-staili.com/
